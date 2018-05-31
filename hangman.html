@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="hangman.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1: Hangman</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+</head>
+<body>
+    <h1>Hangman</h1>
+        <div id="levels">
+            <h2 id="levelSelect">Ready?</h2>
+            <ul>
+                <li><button class="startButton" style="margin-right: 5px">Play Hangman</button></li>
+            </ul>
+        </div>
+        <div id="word">
+            <h2 id="wordInDiv"></h2>
+        </div>    
+        <div class="inputLetter">
+            <h3>input letter here</h3>
+            <form id="form">
+                <input type="text" onkeypress="updateGame" id="letter-field" maxlength="1"></input>
+                <button id="guess">Take a Guess!</button>
+            </form> 
+        </div>    
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <footer>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a porttitor ante. Etiam eleifend dictum purus non condimentum. Nunc vel aliquet diam. Donec lacinia sem ut est rhoncus egestas. Quisque in nibh massa.</footer>
+        </div>      
+    <a id="exit" href="#">Exit Game</a>      
+    <script src="hangman.js"></script>   
+</body>
+</html>
+
+<!-- add play button
+add level selector (easy, medium, hard [display: block])
+add video game music
+pick font 
+add form to submit letters
+add "you win!" alert
+add 25 buttons to form in js -->

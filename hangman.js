@@ -56,21 +56,24 @@ function playGame(evt) {
         answerArray[i] = "_";
     }
     if (isGameOver() === false){
-        document.getElementById('wordInDiv').innerHTML = answerArray.join(' ')
-        // assign variable to button that submits letter guess
-        let secondButton = document.getElementById('guess')
-        var letters = document.getElementById('letter-field') 
-        letters.addEventListener('change', function(evt){
-            input = evt.target.value;
-        })
-        // create click even for second button 
-        secondButton.addEventListener('click', updateGame)
-    } 
-    if (currentWord === answerArray.join('')) {
-        document.getElementById('message').innerHTML = "YOU WIN!"
-    } else { 
-         document.getElementById('message').innerHTML = "GAME OVER"  
-    }  
+        if (currentWord !== answerArray.join('') || wrongAnswers !== 10) {
+            document.getElementById('wordInDiv').innerHTML = answerArray.join(' ')
+            // assign variable to button that submits letter guess
+            let secondButton = document.getElementById('guess')
+            var letters = document.getElementById('letter-field') 
+            letters.addEventListener('change', function(evt){
+                input = evt.target.value;
+            })
+            // create click even for second button 
+            secondButton.addEventListener('click', updateGame)
+        }
+    } else {
+        if (currentWord === answerArray.join('')) {
+            document.getElementById('message').innerHTML = "YOU WIN!"
+        } else { 
+            document.getElementById('message').innerHTML = "GAME OVER"  
+        }  
+    }
 }
 
 // create function to update score 

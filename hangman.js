@@ -42,22 +42,16 @@ var input
 var wrongGuesses =[]
 
 // function randomly selects from "words" when "play" button clicked, creates array with _ in place of characters
-button[0].addEventListener('click', playGame)
+button[0].addEventListener('click', drawBoard)
 
 
 function isGameOver() {
     return currentWord === answerArray.join('') || wrongAnswers === 10
 }
 
-function playGame(evt) {
-    var gameOver;
-    evt.preventDefault();
-    for (i = 0; i < currentWord.length; i++) {
-        answerArray[i] = "_";
-    }
+function playGame() {
     if (isGameOver() === false){
         if (currentWord !== answerArray.join('') || wrongAnswers !== 10) {
-            document.getElementById('wordInDiv').innerHTML = answerArray.join(' ')
             // assign variable to button that submits letter guess
             let secondButton = document.getElementById('guess')
             var letters = document.getElementById('letter-field') 
@@ -76,6 +70,14 @@ function playGame(evt) {
     }
 }
 
+function drawBoard() {
+    for (i = 0; i < currentWord.length; i++) {
+        answerArray[i] = "_";
+    }  
+    document.getElementById('wordInDiv').innerHTML = answerArray.join(' ') 
+    playGame() 
+}
+
 // create function to update score 
 // var input = document.getElementById('letter-field').value 
 var output = document.getElementById('guesses');
@@ -87,12 +89,14 @@ function updateGame(evt) {
     for (var j = 0; j < currentWord.length; j++) {
         if (currentWord[j] === input) {
             answerArray[j] = input;
+            playGame()
             document.getElementById('wordInDiv').innerHTML = answerArray.join(' ')
             correct = true
         }
     }  
     if (correct !== true) {
         wrongAnswers++;
+        playGame()
         wrongGuesses.push(input)
         output.innerHTML = wrongGuesses.join(',')
     }

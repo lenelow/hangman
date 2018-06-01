@@ -102,20 +102,13 @@ function updateGame(evt) {
         wrongGuesses.push(input)
         output.innerHTML = wrongGuesses.join(',')
     }
-}
-
-// use availableInput array to create ensure that if something other than a letter is inputed, alert('Please enter a letter.')
-
-// var remainingLetters = currentWord.length;
-// if (remainingLetters > 0) {
-    
-// } else if (remainingLetters = 0) {
-//     alert('You win!') 
-// }    
+}   
 
 // add happy music when winning/wah wah when losing
 // restrict input to letters
 // make div fade when disappearing
+// add hangman
+// track wins/ losses
 
 // draw hangman
 

@@ -1,5 +1,6 @@
 
 // turn exit button grey when hovered
+
 document.getElementById('exit').onmouseover = function() {
     mouseOver()
 }
@@ -17,7 +18,16 @@ function mouseOut(evt) {
     document.getElementById('exit').style.color = 'black';
 }
 
-// hide start button and "ready?" h2 when "play hangman" button is clicked/enlarge game div
+// put variables here
+var words = ["computer", "coding", "html", "css", "terminal", "github", "repository", "development", "console", "javascript"]
+var currentWord = words[Math.floor(Math.random() * words.length)];
+var answerArray = [];
+var wrongAnswers = 0
+var input 
+var wrongGuesses =[]
+
+// hide start button and "ready?" h2 when "play hangman" button is clicked
+// enlarge game div when "play hangman" button is clicked 
 
 // assign button variable to button with class 'startButton'
 let button = document.getElementsByClassName('startButton')
@@ -32,34 +42,37 @@ function hideDiv(evt) {
     document.getElementById('word').setAttribute('style', 'padding-bottom: 5vh')
 }
 
-// put variables here
-var words = ["acumen", "demagogue", "flagrant", "communicate", "telephone", "idiosyncratic", "funny", "computer", "scarf", "javascript"]
-var currentWord = words[Math.floor(Math.random() * words.length)];
-var answerArray = [];
-var wrongAnswers = 0
-var input 
-var wrongGuesses =[]
-
 // function randomly selects from "words" when "play" button clicked, creates array with _ in place of characters
+// function displays contents of this array on screen
 button[0].addEventListener('click', drawBoard)
+function drawBoard() {
+    for (i = 0; i < currentWord.length; i++) {
+        answerArray[i] = "_";
+    }  
+    document.getElementById('wordInDiv').innerHTML = answerArray.join(' ') 
+    playGame() 
+}
 
-
+// function determinds if game has ended
 function isGameOver() {
     return currentWord === answerArray.join('') || wrongAnswers === 10
 }
 
+// function states that if game isn't over 
 function playGame() {
     if (isGameOver() === false){
         if (currentWord !== answerArray.join('') || wrongAnswers !== 10) {
             // assign variable to button that submits letter guess
             let secondButton = document.getElementById('guess')
-            var letters = document.getElementById('letter-field') 
+            // create variable for iput letters
+            var letters = document.getElementById('letter-field')
+            // create change event that inputs new letter value when value changes 
             letters.addEventListener('change', function(evt){
                 input = evt.target.value;
             })
             // create click even for second button 
             secondButton.addEventListener('click', updateGame)
-        }
+        }// create win and lose messages
     } else {
         if (currentWord === answerArray.join('')) {
             document.getElementById('message').innerHTML = "YOU WIN!"
@@ -72,20 +85,11 @@ function playGame() {
     }
 }
 
-function drawBoard() {
-    for (i = 0; i < currentWord.length; i++) {
-        answerArray[i] = "_";
-    }  
-    document.getElementById('wordInDiv').innerHTML = answerArray.join(' ') 
-    playGame() 
-}
-
 // create function to update score 
 // var input = document.getElementById('letter-field').value 
 var output = document.getElementById('guesses');
 
 function updateGame(evt) {
-    var guesses = '';
     var correct = false;
     evt.preventDefault()
     for (var j = 0; j < currentWord.length; j++) {

@@ -1,5 +1,6 @@
 body {
     font-family: 'Nanum Pen Script', cursive;
+    background-color: #A1EFFF;
 }    
        
 h1 {
@@ -31,6 +32,7 @@ h2 {
     border-radius: 10px;
     display: inline-block;
     font-size: 20px;
+    border: 1px solid blue;
 }
 
 ul {

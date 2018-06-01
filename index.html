@@ -17,14 +17,14 @@
             </ul>
         </div>
         <div id="word">
-            <h2 id="wordInDiv"></h2>
-            <h1 id="message"></h1>
+            <span id="wordInDiv"></span>
+            <span id="message"></span>
             <span id="guesses"></span>
         </div>    
         <div class="inputLetter">
             <h3>input letter here</h3>
             <form id="form">
-                <input type="text" onkeypress="updateGame" id="letter-field" maxlength="1" placeholder="Guess a Letter"></input>
+                <input type="text" onkeypress="updateGame" id="letter-field" maxlength="1" placeholder="Guess a Letter">
                 <button id="guess">Go</button>
             </form> 
         </div>    
@@ -38,10 +38,3 @@
 </body>
 </html>
 
-<!-- add play button
-add level selector (easy, medium, hard [display: block])
-add video game music
-pick font 
-add form to submit letters
-add "you win!" alert
-add 25 buttons to form in js -->

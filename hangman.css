@@ -45,21 +45,21 @@ li {
 }
 
 #word {
-    height: 25vh;
-    border: 1px solid black;
+    height: 23vh;
+    /* border: 1px solid black; */
     margin-right: 15vw;
     margin-left: 15vw;
+    padding-top: 5vh;
 }
 
 #guesses {
     font-size: 40px;
     text-align: center;
     display: block;
-    margin-top: 20vh;
 }
 
 h3 {
-    margin-bottom: 5px;
+    margin-bottom: 0;
     text-align: center;
 }
 
@@ -74,8 +74,13 @@ form {
 }
 
 .instructions {
-    margin-top: 5vh;
+    /* margin-top: 3vh; */
     margin-left: 2vw;
+    margin-bottom: 20px;
+}
+
+.instructions h2 {
+    margin-top: 10px;
 }
 
 footer {
@@ -85,6 +90,7 @@ footer {
     line-height: 1;
     margin-left: 25vw;
     margin-right: 25vw;
+    margin-bottom: 20px;
 }
 
 a {

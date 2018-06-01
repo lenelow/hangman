@@ -33,10 +33,9 @@ function hideDiv(evt) {
 }
 
 // put variables here
-var words = ["acumen", "demagogue", "flagrant", "communicate", "telephone", "idiosyncratic", "funny", "computer", "scarf", "JavaScript"]
+var words = ["acumen", "demagogue", "flagrant", "communicate", "telephone", "idiosyncratic", "funny", "computer", "scarf", "javascript"]
 var currentWord = words[Math.floor(Math.random() * words.length)];
 var answerArray = [];
-var availableInput = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 var wrongAnswers = 0
 var input 
 var wrongGuesses =[]
@@ -64,8 +63,11 @@ function playGame() {
     } else {
         if (currentWord === answerArray.join('')) {
             document.getElementById('message').innerHTML = "YOU WIN!"
+            document.getElementById('message').style.color = 'blue'
+ 
         } else { 
-            document.getElementById('message').innerHTML = "GAME OVER"  
+            document.getElementById('message').innerHTML = "GAME OVER" 
+            document.getElementById('message').style.color = 'red' 
         }  
     }
 }

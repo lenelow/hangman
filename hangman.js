@@ -29,7 +29,7 @@ button[0].addEventListener('click', hideDiv)
 function hideDiv(evt) {
     evt.preventDefault();
     document.getElementById('levels').setAttribute('style', 'display: none')
-    document.getElementById('word').setAttribute('style', 'padding-bottom: 20vh')
+    document.getElementById('word').setAttribute('style', 'padding-bottom: 5vh')
 }
 
 // put variables here

@@ -61,6 +61,7 @@ li {
 h3 {
     margin-bottom: 0;
     text-align: center;
+    font-size: 25px;
 }
 
 form {
@@ -74,13 +75,12 @@ form {
 .inputLetter {
     margin-top: 5vh;
     margin-bottom: -20px;
-    margin-left: 2vw;
 }
 
 .instructions {
-    /* margin-top: 3vh; */
+    margin-top: 10vh;
     margin-left: 2vw;
-    margin-bottom: 20px;
+    margin-bottom: 10vh;
 }
 
 .instructions h2 {
@@ -102,7 +102,7 @@ a {
     position:absolute;
     bottom:0;
     right:0;
-    margin-bottom: 29.050px;
+    margin-bottom: 0;
     margin-right: 15px;
     color: black;
     font-size: 35px;

@@ -58,13 +58,13 @@ function isGameOver() {
     return currentWord === answerArray.join('') || wrongAnswers === 10
 }
 
-// function states that if game isn't over 
+// function states that, if game isn't over...
 function playGame() {
     if (isGameOver() === false){
         if (currentWord !== answerArray.join('') || wrongAnswers !== 10) {
             // assign variable to button that submits letter guess
             let secondButton = document.getElementById('guess')
-            // create variable for iput letters
+            // create variable for input letters
             var letters = document.getElementById('letter-field')
             // create change event that inputs new letter value when value changes 
             letters.addEventListener('change', function(evt){
@@ -86,27 +86,30 @@ function playGame() {
 }
 
 // create function to update score 
-// var input = document.getElementById('letter-field').value 
+
+// create variable for incorrect guesses
 var output = document.getElementById('guesses');
 
 function updateGame(evt) {
+    document.getElementById('form').reset()// form resets after entry
     var correct = false;
     evt.preventDefault()
-    for (var j = 0; j < currentWord.length; j++) {
-        if (currentWord[j] === input) {
-            answerArray[j] = input;
+    for (var j = 0; j < currentWord.length; j++) { 
+        if (currentWord[j] === input) { // create loop that determines if input letter is in random word
+            answerArray[j] = input; // if so, add it to array showing on screen (update)
             playGame()
-            document.getElementById('wordInDiv').innerHTML = answerArray.join(' ')
-            correct = true
+            document.getElementById('wordInDiv').innerHTML = answerArray.join(' ') // puts array on screen
+            correct = true // all of this means, letter is correct/ in random word
         }
     }  
-    if (correct !== true) {
-        wrongAnswers++;
+    if (correct !== true) {// if letter is not correct
+        wrongAnswers++;// increase wrong answers (starts at 0, can't be more than 10)
         playGame()
-        wrongGuesses.push(input)
-        output.innerHTML = wrongGuesses.join(',')
+        wrongGuesses.push(input)// add the incorreect input to wrongGuesses array
+        output.innerHTML = wrongGuesses.join(',')// display wrong guess array content on screen
     }
 }   
+
 
 // add happy music when winning/wah wah when losing
 // restrict input to letters

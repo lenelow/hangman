@@ -67,6 +67,12 @@ li {
     text-align: center;
 }
 
+#guess {
+    background-color: white;
+    border: 1px solid #869091;
+    border-radius: 5px;
+}
+
 #guesses {
     font-size: 50px;
     text-align: center;
@@ -90,6 +96,7 @@ form {
 
 .inputLetter {
     margin-bottom: -20px;
+    padding-bottom: 15px;
 }
 
 .instructions {
@@ -112,13 +119,70 @@ footer {
     margin-bottom: 20px;
 }
 
-a {
-    text-decoration: underline;
-    position:absolute;
-    bottom:0;
-    right:0;
-    margin-bottom: 0;
-    margin-right: 15px;
-    color: black;
-    font-size: 35px;
+#exit {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .instructions {
+        display: none;
+    }
+
+    #letter-field {
+        height: 35px;
+        width: 180px;
+        margin-top: 8px;
+        margin-right: 5px;
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 30px;
+        padding-right: 70px;
+    }
+
+    #guess {
+        padding: 6px 16px;
+        border-radius: 5px;
+        background-color: #A5B1B2;
+        border:1px solid #4E5454;
+        font-size: 15px;
+    }
+
+    #message {
+        font-size: 50px;
+    }
+
+    #word {
+        margin-bottom: 30px;
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+
+    #wordInDiv {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 448px) {
+    h3 {
+        margin-top: 60px;
+    }
+
+    #wordInDiv {
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+
+    #guesses {
+        font-size: 35px;
+    }
+
+    #word {
+        margin-bottom: 0;
+    }
+
+    #form {
+        margin-bottom: 100px;
+    }
 }

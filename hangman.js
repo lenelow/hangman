@@ -24,7 +24,7 @@ var currentWord = words[Math.floor(Math.random() * words.length)];
 var answerArray = [];
 var wrongAnswers = 0
 var input 
-var wrongGuesses =[]
+var wrongGuesses = []
 
 // hide start button and "ready?" h2 when "play hangman" button is clicked
 // enlarge game div when "play hangman" button is clicked 
@@ -111,3 +111,5 @@ function updateGame(evt) {
 }   
 
 
+// add "new game" button
+// limit guesses to 10

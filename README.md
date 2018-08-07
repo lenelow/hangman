@@ -1,6 +1,8 @@
 
 Leah Enelow
+
 Hangman
+
 Deployed App: https://lenelow.github.io/hangman/index.html
 
 DESCRIPTION

@@ -22,7 +22,7 @@ bronze:
     10) contains an exit button that currently takes you nowhere, but would hypothetically exit the game
 
 silver:
-    1) input is restricted to numbers
+    1) input is restricted to letters
     2) div that disappears when play button is clicked fades more slowly
 
 gold:

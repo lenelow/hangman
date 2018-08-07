@@ -1,10 +1,10 @@
 
 Leah Enelow
-Project 1--Hangman
-GitHub Repository: https://github.com/lenelow/hangman/tree/gh-pages
+Hangman
+Deployed App: https://lenelow.github.io/hangman/index.html
 
 DESCRIPTION
-My project is a Hangman word game. The player generates an unknown word by clicking a button. The user is shown how many letters are in the word, and their objective is to deduce the word by inputting letters as guesses. With each letter they input, they are shown whether that letter is in the word. If so, they are shown how many times that letter is in the word and where it is placed in the word. If not, the letter is displayed below the random word. If they guess 10 wrong letters before determing the entire word, the game is over. If not, the user wins the game. 
+This project is a Hangman word game. The player generates an unknown word by clicking a button. The user is shown how many letters are in the word, and their objective is to deduce the word by inputting letters as guesses. With each letter they input, they are shown whether or not that letter is in the word. If so, they are shown how many times that letter is in the word and where it is placed in the word. If not, the letter is displayed below the word. If they guess 10 wrong letters before determing the entire word, the game is over. If not, the user wins the game. 
 
 FEATURES
 bronze:

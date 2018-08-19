@@ -29,7 +29,7 @@ gold:
     1) music plays when player wins/loses
     2) track wins/losses
 
-MVP:
+platinum:
     1) use canvas to draw hangman as wrong letters are guessed
 
 TECHNOLOGIES USED
